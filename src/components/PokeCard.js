@@ -31,8 +31,10 @@ function PokeCard({ pokemonName }) {
             <div>
                 <strong>Abilities:</strong>
                 <ul>
-                    {abilities.map((ability) => (
-                        <li key={ability.ability.name}>{ability.ability.name}</li>
+                    {abilities.map((ability, index) => (
+                        <li key={`${ability.ability.name}-${index}`}>
+                            {ability.ability.name}
+                        </li>
                     ))}
                 </ul>
             </div>
