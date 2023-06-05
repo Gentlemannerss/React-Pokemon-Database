@@ -18,7 +18,7 @@ function PokeCard({ pokemonName }) {
         fetchPokemon();
     }, [pokemonName]);
 
-    if (!pokemon) {
+    if (!pokemon) { //In plaats van dit gebruik een UseState met een boolean waarde.
         return <div>Loading...</div>;
     }
 
